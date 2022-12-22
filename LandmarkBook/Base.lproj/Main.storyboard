@@ -31,15 +31,51 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Landmark Book" prompt="This is prompt." id="YaL-so-UIK">
-                        <barButtonItem key="backBarButtonItem" title="Back button" id="t97-MA-7Da"/>
+                        <barButtonItem key="backBarButtonItem" title="Back" id="t97-MA-7Da"/>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="2zP-rk-U4Z" id="jlN-ye-CdP"/>
+                        <segue destination="tBv-1u-03Y" kind="show" identifier="toDetailsVC" id="ObT-LL-KHb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="114.50892857142857"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="Ibr-aH-hPF">
+            <objects>
+                <viewController id="tBv-1u-03Y" customClass="DetailsViewController" customModule="LandmarkBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ayc-zs-5sS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H3o-yv-cEB">
+                                <rect key="frame" x="28" y="147" width="357" height="263"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRl-12-1rB">
+                                <rect key="frame" x="38" y="476" width="338" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="N9n-L4-opB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" prompt="Landmark Book" largeTitleDisplayMode="always" id="Q7o-JZ-u4f">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Vzd-SY-bdn"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="H3o-yv-cEB" id="obj-Tm-wZq"/>
+                        <outlet property="landmarkLabel" destination="hRl-12-1rB" id="V9Y-QM-eT9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zIr-Tb-Q9y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1773.913043478261" y="114.50892857142857"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Cat-BG-jL1">
